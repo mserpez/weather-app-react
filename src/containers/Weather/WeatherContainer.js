@@ -25,7 +25,7 @@ class WeatherContainer extends React.Component {
     };
   }
   /*FUNCTION TO CHANGE AND HANDLE IN STATE SELECTED NAV TAB (SEARCH AND HISTORY)*/
-  changeSelectedNav = (nav) => {
+  _changeSelectedNav = (nav) => {
     this.setState({selectedNav: nav});
   }
 
@@ -37,7 +37,7 @@ class WeatherContainer extends React.Component {
         <Grid item xs={12} md={3}>
           <div className={classes.navContent}>
             {/*NAVIGATION BETWEEN SEARCH AND HISTORY*/}
-            <WeatherNavigation navigate={this.changeSelectedNav} currentNav={this.state.selectedNav}/>
+            <WeatherNavigation navigate={this._changeSelectedNav} currentNav={this.state.selectedNav}/>
             {
               this.state.selectedNav === NAVIGATION_TABS.SEARCH ?
                 <WeatherForm /> : <WeatherHistory/>

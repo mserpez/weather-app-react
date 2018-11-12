@@ -11,20 +11,22 @@ const withLoader = () => compose(
   branch(
     props => props.hasError,
     renderComponent(
-      props => <div
-        style={{
-          color: 'white',
-          textAlign: 'center',
-          textTransform: 'capitalize',
-          backgroundColor: '#2196f3',
-          padding: 20,
-          width: '40%',
-          margin: '0 auto',
-          marginTop: 100,
-        }}
-      >
-        {`${props.errorInfo.body} :(`}
-      </div>,
+      props => (
+        <div
+          style={{
+            color: 'white',
+            textAlign: 'center',
+            textTransform: 'capitalize',
+            backgroundColor: '#2196f3',
+            padding: 20,
+            width: '40%',
+            margin: '0 auto',
+            marginTop: 100,
+          }}
+        >
+          {`${props.errorInfo.body} :(`}
+        </div>
+      ),
     ),
   ),
 );

@@ -1,12 +1,12 @@
 // DEPENDENCIES
 import dotProp from 'dot-prop-immutable';
 // ACTION TYPES
+import { REHYDRATE } from 'redux-persist';
 import {
   SEARCH_WEATHER_DATA,
   REMOVE_HISTORY,
   SAVE_HISTORY,
 } from './actionTypes';
-import { REHYDRATE } from 'redux-persist';
 // CONSTANTS
 import { NAME } from './constants';
 

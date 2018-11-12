@@ -2,9 +2,8 @@ import React from 'react';
 import { withStyles } from '@material-ui/core';
 import PropTypes from 'prop-types';
 import { compose } from 'redux';
-import {
-  Map, InfoWindow, Marker, GoogleApiWrapper,
-} from 'google-maps-react';
+import GoogleMapReact from 'google-map-react';
+import { GOOGLE_MAPS_KEY } from '../../constants';
 
 const styles = theme => ({
   container: {
@@ -19,7 +18,15 @@ const styles = theme => ({
 
 const WeatherMap = ({ classes, google, data }) => (
   <div className={classes.container}>
-    TODO MAP
+
+    <GoogleMapReact
+      bootstrapURLKeys={{ key: GOOGLE_MAPS_KEY }}
+      defaultCenter={{
+        lat: data.coord.lat,
+        lng: data.coord.lon,
+      }}
+      defaultZoom={10}
+    />
   </div>
 );
 
@@ -27,10 +34,6 @@ WeatherMap.propTypes = {
   classes: PropTypes.object.isRequired,
 
 };
-
-const LoadingContainer = props => (
-  <div>Fancy loading container!</div>
-);
 
 export default compose(
   withStyles(styles),

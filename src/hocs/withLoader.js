@@ -10,7 +10,7 @@ const withLoader = () => compose(
   branch(
     props => props.isLoading,
     renderComponent(
-      (props) => <div style={{textAlign: 'center', marginTop: 100}}>LOADING...</div>,
+      props => <div style={{ textAlign: 'center', marginTop: 100 }}>LOADING...</div>,
     ),
   ),
 );

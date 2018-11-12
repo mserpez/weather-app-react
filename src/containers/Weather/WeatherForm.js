@@ -21,9 +21,9 @@ const formSelector = formValueSelector(NAME);
 
 class WeatherForm extends React.Component {
 
-  submitForm = () => {
+  // SUBMIT FORM DATA AND CALL ACTION TO SET DATA IN STORE
+  _submitForm = () => {
     const { getWeatherDataAction, formValueCity } = this.props;
-
     getWeatherDataAction(formValueCity);
   }
 
@@ -31,8 +31,9 @@ class WeatherForm extends React.Component {
     const { handleSubmit, classes } = this.props;
 
     return (
+      // RENDER FORM TO GET CITY NAME
       <div className={classes.container}>
-        <Form onSubmit={this.submitForm}>
+        <Form onSubmit={this._submitForm}>
           <Grid container>
             <Grid item xs={12}>
               <Field name="city" component={TextField} label="Select City..." />

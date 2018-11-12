@@ -3,7 +3,7 @@ import thunkMiddleware from 'redux-thunk';
 import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import rootReducer from './rootReducer';
-import {constants} from '../containers/Weather';
+import { constants } from '../containers/Weather';
 
 const composeEnhancers = typeof window === 'object'
   && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__

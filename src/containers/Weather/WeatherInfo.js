@@ -24,8 +24,8 @@ const styles = theme => ({
 
 const WeatherInfo = ({ data, classes }) => (
   <React.Fragment>
-    {/*TODO: CREATE COMPONENT TO AVOID REPEAT CODE*/}
-    {/*TODO: CREATE CONTANTS FOR ITEMS NAME.*/}
+    {/* TODO: CREATE COMPONENT TO AVOID REPEAT CODE */}
+    {/* TODO: CREATE CONTANTS FOR ITEMS NAME. */}
     <Grid container>
       <Grid item xs={12} md={4}>
         <div className={classes.boxItem}>
