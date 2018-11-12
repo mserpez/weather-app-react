@@ -17,13 +17,14 @@ const styles = {
 };
 
 class WeatherContainer extends React.Component {
+
   constructor(props) {
     super(props);
     this.state = {
       selectedNav: NAVIGATION_TABS.SEARCH
     };
   }
-
+  /*FUNCTION TO CHANGE AND HANDLE IN STATE SELECTED NAV TAB (SEARCH AND HISTORY)*/
   changeSelectedNav = (nav) => {
     this.setState({selectedNav: nav});
   }
@@ -35,6 +36,7 @@ class WeatherContainer extends React.Component {
       <Grid container>
         <Grid item xs={12} md={3}>
           <div className={classes.navContent}>
+            {/*NAVIGATION BETWEEN SEARCH AND HISTORY*/}
             <WeatherNavigation navigate={this.changeSelectedNav} currentNav={this.state.selectedNav}/>
             {
               this.state.selectedNav === NAVIGATION_TABS.SEARCH ?
@@ -43,6 +45,7 @@ class WeatherContainer extends React.Component {
           </div>
         </Grid>
         <Grid item xs={12} md={9}>
+          {/*WEATHER DETAILS*/}
           <WeatherDetails data={weatherData} />
         </Grid>
       </Grid>

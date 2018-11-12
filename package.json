@@ -9,6 +9,7 @@
     "axios": "^0.18.0",
     "dot-prop-immutable": "^1.5.0",
     "google-maps-react": "^2.0.2",
+    "moment": "^2.22.2",
     "normalizr": "^3.3.0",
     "prop-types": "^15.6.2",
     "react": "^16.6.1",

@@ -8,19 +8,19 @@ import {
 
 const styles = theme => ({
   container: {
-    margin: 10,
+    background: theme.palette.primary.grey,
     maxWidth: '100%',
+    display: 'flex',
+    height: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });
 
 const WeatherMap = ({ classes, google, data }) => (
-  <iframe
-    width="600"
-    height="450"
-    frameBorder="0"
-    src={"https://www.google.com/maps/embed/v1/place?key=AIzaSyAS56ZA-2EgCrrOYur8GG0nTdxRb4oj6XQ=Space+Needle,Seattle+WA"}
-  >
-  </iframe>
+  <div className={classes.container}>
+    TODO MAP
+  </div>
 );
 
 WeatherMap.propTypes = {

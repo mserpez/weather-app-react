@@ -8,7 +8,7 @@ const styles = theme => ({
   boxItem: {
     backgroundColor: theme.palette.primary.grey,
     textAlign: 'center',
-    padding: 40,
+    padding: 30,
     margin: 1,
   },
   boxLabel: {
@@ -27,31 +27,31 @@ const WeatherInfo = ({ data, classes }) => (
     {/*TODO: CREATE COMPONENT TO AVOID REPEAT CODE*/}
     {/*TODO: CREATE CONTANTS FOR ITEMS NAME.*/}
     <Grid container>
-      <Grid item xs={4}>
+      <Grid item xs={12} md={4}>
         <div className={classes.boxItem}>
           <p className={classes.boxLabel}>Temperature</p>
           <p className={classes.boxValue}>{`${data.main.temp} °F`}</p>
         </div>
       </Grid>
-      <Grid item xs={4}>
+      <Grid item xs={12} md={4}>
         <div className={classes.boxItem}>
           <p className={classes.boxLabel}>Pressure</p>
           <p className={classes.boxValue}>{`${data.main.pressure} Hpa`}</p>
         </div>
       </Grid>
-      <Grid item xs={4}>
+      <Grid item xs={12} md={4}>
         <div className={classes.boxItem}>
           <p className={classes.boxLabel}>Humidity</p>
           <p className={classes.boxValue}>{`${data.main.humidity} %`}</p>
         </div>
       </Grid>
-      <Grid item xs={6}>
+      <Grid item xs={12} md={6}>
         <div className={classes.boxItem}>
           <p className={classes.boxLabel}>Max temperature</p>
           <p className={classes.boxValue}>{`${data.main.temp_max} °F`}</p>
         </div>
       </Grid>
-      <Grid item xs={6}>
+      <Grid item xs={12} md={6}>
         <div className={classes.boxItem}>
           <p className={classes.boxLabel}>Min temperature</p>
           <p className={classes.boxValue}>{`${data.main.temp_min} °F`}</p>
