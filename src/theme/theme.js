@@ -12,9 +12,11 @@ const Theme = createMuiTheme({
       paper: '#FFFFFF',
     },
     primary: {
-      main: '#2a3c66', // Main Blue
-      light: '#268ca6', // Second Blue
+      main: '#2196f3', // Main Blue
+      light: '#2196f3', // Second Blue
       white: '#FFF',
+      grey: '#F0f0f0',
+      black: '#333333',
     },
     error: {
       main: '#d41124', // Default Red for Errors
